@@ -63,11 +63,20 @@ developing your own process.
 - Add a new toy when the toy form is submitted
 
   - How I debugged:
+  ```POST http://localhost:4000/toys 500 (Internal Server Error)``
+  Console describes that there is an internalServer error when doing the post method.  
+  ```NameError (uninitialized constant ToysController::Toys):```  
+  The server shows that there is uninitilalized constant ToysConyroller of Toys instead of Toy.
+
 
 - Update the number of likes for a toy
 
   - How I debugged:
+  ```Uncaught (in promise) SyntaxError: Unexpected end of JSON input```
+  Console describes that there is an error of unpermitted parameter of id
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+  ```DELETE http://localhost:4000/toys/1 404 (Not Found)```
+  There  is no route which matches the delete of the toys.
